@@ -1,5 +1,6 @@
 {
   "singleQuote": true,
   "useTabs": true,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "endOfLine": "lf"
 }
