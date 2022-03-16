@@ -49,6 +49,6 @@ class LiquidParserClass {
 		return liquidString;
 	}
 }
-const LiquidParser = new LiquidParserClass(liquidVariables);
+const LiquidParse = new LiquidParserClass(liquidVariables);
 
-export default LiquidParser;
+export default LiquidParse;

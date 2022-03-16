@@ -1,3 +1,5 @@
+import { MODYO_SITE, MODYO_URL, MODYO_TOKEN } from '../constants';
+
 interface Site {
 	name: string;
 	language: string;
@@ -9,22 +11,37 @@ interface Account {
 interface User {
 	access_token: string;
 }
+
+interface Type {
+	name: string;
+	value: string;
+}
+interface Assets {
+	image: Type;
+}
 export interface Variables {
 	site: Site;
 	account: Account;
 	user: User;
+	assets: Assets;
 }
 
 export const liquidVariables: Variables = {
 	site: {
-		name: 'private-oauth2',
+		name: MODYO_SITE,
 		language: 'es',
-		url: 'https://iuvity.modyo.cloud/private-oauth2',
+		url: `${MODYO_URL}/${MODYO_SITE}`,
 	},
 	account: {
-		url: 'https://iuvity.modyo.cloud',
+		url: `${MODYO_URL}`,
 	},
 	user: {
-		access_token: 'Zo1BHQwiWWZKATdo-ubgTz7KGBcgeOJSQ3pBbXjqmJ4',
+		access_token: `${MODYO_TOKEN}`,
+	},
+	assets: {
+		image: {
+			name: 'logo',
+			value: "{{ 'a7a4b683-f68a-4385-8d1c-4f3374dd2213' | asset_image }}",
+		},
 	},
 };
