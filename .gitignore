@@ -13,7 +13,9 @@ dist-ssr
 *.local
 .env
 storybook-static
-coverage
+
+# testing
+/coverage/lcov-report
 
 # Editor directories and files
 .vscode/*
