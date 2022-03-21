@@ -3,7 +3,7 @@ import { Liquid } from 'liquidjs';
 
 let engine: Liquid;
 
-if (process.env.NODE_ENV !== 'production') {
+if (import.meta.env.MODE !== 'production') {
 	engine = new Liquid({
 		strictFilters: true,
 		strictVariables: true,
@@ -36,14 +36,14 @@ class LiquidParserClass {
 	}
 
 	parse(liquidString: string) {
-		if (process.env.NODE_ENV !== 'production') {
+		if (import.meta.env.MODE !== 'production') {
 			return this.parseLiquid(liquidString);
 		}
 		return liquidString;
 	}
 
 	parseAsync(liquidString: string) {
-		if (process.env.NODE_ENV !== 'production') {
+		if (import.meta.env.MODE !== 'production') {
 			return this.parseLiquidAsync(liquidString);
 		}
 		return liquidString;
