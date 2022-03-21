@@ -18,7 +18,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@faker-js/faker": "6.0.0",
     "@modyo/sdk": "^1.0.6",
     "liquidjs": "^9.36.0",
     "react": "^17.0.2",
