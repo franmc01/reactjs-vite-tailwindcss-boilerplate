@@ -18,11 +18,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@faker-js/faker": "6.0.0",
     "@modyo/sdk": "^1.0.6",
     "liquidjs": "^9.36.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-slick": "^0.28.1"
+    "react-slick": "^0.28.1",
+    "windowed-observable": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
