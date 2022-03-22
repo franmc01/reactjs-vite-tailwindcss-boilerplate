@@ -1,12 +1,13 @@
-// import { getTypeFromLiquid } from '../utils/getTypeFromLiquid';
 import { ChangeEvent, useState } from 'react';
-import { ObserverComponent } from '../components/ObserverComponent';
-import { PublisherComponent } from '../components/PublisherComponent';
+// import { getTypeFromLiquid } from '../utils/getTypeFromLiquid';
+import { ObserverComponent } from '../components/custom/ObserverComponent';
+import { PublisherComponent } from '../components/custom/PublisherComponent';
+
 const App = () => {
 	// const image = getTypeFromLiquid('{{assets.image.value}}');
 	const [ninja, setNinja] = useState('');
-	const handleOnChange = (ev: ChangeEvent<HTMLInputElement>) => {
-		setNinja(ev.target.value);
+	const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
+		setNinja(event.target.value);
 	};
 	return (
 		<div className='py-16 px-4 mx-auto max-w-screen-xl sm:py-24 sm:px-6 lg:px-8'>
@@ -20,11 +21,17 @@ const App = () => {
 				<h1 className='text-4xl font-semibold tracking-wide text-blue-900 uppercase'>
 					Hello World!
 				</h1>
-				<form className='my-5'>
+
+				<form
+					className='my-5'
+					onSubmit={(ev) => {
+						ev.preventDefault();
+					}}
+				>
 					<input
-						className='py-2 px-3 mb-3 w-full leading-tight text-gray-700 rounded border focus:outline-none shadow appearance-none'
 						type='text'
-						onChange={handleOnChange}
+						className='py-2 px-3 mb-3 w-full leading-tight text-gray-700 rounded border focus:outline-none shadow appearance-none'
+						onChange={onChangeInput}
 						placeholder='Enter the name of a famous ninja you know'
 					/>
 					<PublisherComponent ninja={ninja} />

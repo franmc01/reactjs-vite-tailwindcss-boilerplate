@@ -1,13 +1,14 @@
-import { EVENT_NINJA } from '../constants';
 import React, { FC } from 'react';
-import { Observable } from 'windowed-observable';
-
-const observable = new Observable(EVENT_NINJA);
+import { EVENT_NINJA } from '../../constants';
+import { EventCreator } from '../../utils/EventCreator';
+const ninjaEvent = new EventCreator<{ ninja: string }>(EVENT_NINJA);
 type PublisherProps = {
 	ninja: string;
 };
 export const PublisherComponent: FC<PublisherProps> = ({ ninja }) => {
-	const handleClick = (ninja: string) => () => observable.publish(ninja);
+	const handleClick = (ninja: string) => () => {
+		ninjaEvent.addData({ ninja }).dispatchEvent();
+	};
 	return (
 		<button
 			type='button'

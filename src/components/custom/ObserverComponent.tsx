@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Observable } from 'windowed-observable';
-import { EVENT_NINJA } from '../constants';
-const observable = new Observable(EVENT_NINJA);
+import { EVENT_NINJA } from '../../constants';
 
 export const ObserverComponent = () => {
 	const [ninjas, setNinjas] = useState<string[]>([]);
 	useEffect(() => {
-		const observer = (ninja: string) => {
-			setNinjas((allNinjas) => allNinjas.concat(ninja));
-		};
-		observable.subscribe(observer);
-
-		return () => {
-			observable.unsubscribe(observer);
-		};
+		window.addEventListener(EVENT_NINJA, ((
+			event: CustomEvent<{ ninja: string }>
+		) => {
+			setNinjas((allNinjas) => allNinjas.concat(event.detail.ninja));
+		}) as EventListener);
 	}, []);
 	return (
 		<ul className='divide-y divide-gray-200'>
