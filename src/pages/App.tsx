@@ -1,6 +1,5 @@
 import { ChangeEvent, useState } from 'react';
 // import { getTypeFromLiquid } from '../utils/getTypeFromLiquid';
-import { ObserverComponent } from '../components/custom/ObserverComponent';
 import { PublisherComponent } from '../components/custom/PublisherComponent';
 
 const App = () => {
@@ -22,7 +21,7 @@ const App = () => {
 					Hello World!
 				</h1>
 
-				<form
+				<div
 					className='my-5'
 					onSubmit={(ev) => {
 						ev.preventDefault();
@@ -35,8 +34,7 @@ const App = () => {
 						placeholder='Enter the name of a famous ninja you know'
 					/>
 					<PublisherComponent ninja={ninja} />
-					<ObserverComponent />
-				</form>
+				</div>
 			</div>
 		</div>
 	);

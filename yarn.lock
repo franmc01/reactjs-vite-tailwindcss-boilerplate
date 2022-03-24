@@ -12777,11 +12777,6 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
-windowed-observable@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/windowed-observable/-/windowed-observable-1.0.0.tgz#126f10f3345e30b09a780359e12956fac45b930a"
-  integrity sha512-KZuCPUTpCRvNbcNWpDSwrjXJP5kDzuzcjo7DC80sJ0IRQWOR2OHEfGErXFKuJicYJyLTapUH6BDai7y78SX5sQ==
-
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
