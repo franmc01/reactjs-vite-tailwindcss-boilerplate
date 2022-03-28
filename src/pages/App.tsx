@@ -4,7 +4,8 @@ import { ObserverComponent } from '../components/custom/ObserverComponent';
 import { PublisherComponent } from '../components/custom/PublisherComponent';
 
 const App = () => {
-	// const image = getTypeFromLiquid('{{assets.image.value}}');
+	// const image = getTypeFromLiquid('{{vars.tailwind}}');
+	// console.log(image);
 	const [ninja, setNinja] = useState('');
 	const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
 		setNinja(event.target.value);

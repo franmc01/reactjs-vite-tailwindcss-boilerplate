@@ -13,7 +13,7 @@ export class EventCreator<T> {
 	}
 
 	dispatchEvent() {
-		const event = new CustomEvent(this.eventName, this.data);
+		const event = new CustomEvent<{ detail: T }>(this.eventName, this.data);
 		window.dispatchEvent(event);
 	}
 }

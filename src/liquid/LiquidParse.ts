@@ -1,9 +1,10 @@
+import { isProduction } from '../constants';
 import { liquidVariables, Variables } from './localVariables';
 import { Liquid } from 'liquidjs';
 
-let engine: Liquid;
+let engine: Liquid | null = null;
 
-if (import.meta.env.MODE === 'production') {
+if (!isProduction) {
 	engine = new Liquid({
 		strictFilters: true,
 		strictVariables: true,
@@ -19,7 +20,7 @@ class LiquidParserClass {
 
 	async parseLiquidAsync(liquidString: string) {
 		try {
-			const parsed = await engine.parseAndRender(liquidString, this.library);
+			const parsed = await engine?.parseAndRender(liquidString, this.library);
 			return parsed;
 		} catch (error) {
 			return error;
@@ -28,7 +29,7 @@ class LiquidParserClass {
 
 	parseLiquid(liquidString: string) {
 		try {
-			const parsed = engine.parseAndRenderSync(liquidString, this.library);
+			const parsed = engine?.parseAndRenderSync(liquidString, this.library);
 			return parsed;
 		} catch (error) {
 			return error;
@@ -36,14 +37,14 @@ class LiquidParserClass {
 	}
 
 	parse(liquidString: string) {
-		if (import.meta.env.MODE === 'production') {
+		if (!isProduction) {
 			return this.parseLiquid(liquidString);
 		}
 		return liquidString;
 	}
 
 	parseAsync(liquidString: string) {
-		if (import.meta.env.MODE === 'production') {
+		if (!isProduction) {
 			return this.parseLiquidAsync(liquidString);
 		}
 		return liquidString;

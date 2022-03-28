@@ -9,14 +9,22 @@ export const ObserverComponent = () => {
 		) => {
 			setNinjas((allNinjas) => allNinjas.concat(event.detail.ninja));
 		}) as EventListener);
+		return () => {
+			window.removeEventListener(EVENT_NINJA, () => {
+				setNinjas([]);
+			});
+		};
 	}, []);
 	return (
-		<ul className='divide-y divide-gray-200'>
-			{ninjas.map((value, key) => (
-				<li className='flex py-4' key={key}>
-					<p className='font-medium text-gray-900'>{value}</p>
-				</li>
-			))}
-		</ul>
+		<>
+			<h1 className='font-medium'>Observer Component</h1>
+			<ul className='divide-y divide-gray-200'>
+				{ninjas.map((value, key) => (
+					<li className='flex py-4' key={key}>
+						<p className='font-medium text-gray-900'>{value}</p>
+					</li>
+				))}
+			</ul>
+		</>
 	);
 };
