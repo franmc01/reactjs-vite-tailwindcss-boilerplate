@@ -1,3 +1,4 @@
+/// <reference types="react/next" />
 /// <reference types="vite/client" />
 interface ImportMetaEnv {
 	readonly VITE_MODYO_ACCOUNT_URL: string;

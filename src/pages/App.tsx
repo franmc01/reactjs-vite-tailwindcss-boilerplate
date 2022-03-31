@@ -1,11 +1,10 @@
 import { ChangeEvent, useState } from 'react';
-// import { getTypeFromLiquid } from '../utils/getTypeFromLiquid';
+import LiquidParse from '../liquid/LiquidParse';
 import { ObserverComponent } from '../components/custom/ObserverComponent';
 import { PublisherComponent } from '../components/custom/PublisherComponent';
 
+const image = LiquidParse.parse('{{vars.tailwind}}');
 const App = () => {
-	// const image = getTypeFromLiquid('{{vars.tailwind}}');
-	// console.log(image);
 	const [ninja, setNinja] = useState('');
 	const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
 		setNinja(event.target.value);
@@ -14,7 +13,7 @@ const App = () => {
 		<div className='py-16 px-4 mx-auto max-w-screen-xl sm:py-24 sm:px-6 lg:px-8'>
 			<div className='text-center'>
 				<img
-					src='https://cloud.modyocdn.com/uploads/a7a4b683-f68a-4385-8d1c-4f3374dd2213/original/logo-tailwind_e8c14e87.png'
+					src={image}
 					alt='logo-tailwind'
 					className='object-contain mx-auto w-96 h-48'
 				/>
