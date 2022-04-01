@@ -7,6 +7,6 @@ describe('When render <App /> component', () => {
 		render(<App />);
 	});
 	test('should render it self', () => {
-		expect(screen.getByText('Hello World!')).toBeInTheDocument();
+		expect(screen.getByText('Custom provider')).toBeInTheDocument();
 	});
 });

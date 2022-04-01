@@ -14,6 +14,7 @@
 *.jsx                 text eol=lf
 *.ts                  text eol=lf
 *.tsx                 text eol=lf
+*.vue                 text eol=lf
 *.git*                text eol=lf
 *.editorconfig        text eol=lf
 *.eslintignore        text eol=lf
@@ -23,6 +24,8 @@
 *.prettierignore      text eol=lf
 *.prettierrc          text eol=lf
 Dockerfile            text eol=lf
+.browserslistrc       text eol=lf
+*.lock                text eol=lf
 
 *.awk  text eol=lf
 *.sed  text eol=lf

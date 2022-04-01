@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "cols": [
+      {
+        "name": "Transaction Date",
+        "id": "transactionDate",
+        "type": "text",
+        "sort": true
+      },
+      {
+        "name": "Application Date",
+        "id": "applicationDate",
+        "type": "text",
+        "sort": true
+      },
+      {
+        "name": "Description",
+        "id": "description",
+        "type": "text"
+      },
+      {
+        "name": "Reference",
+        "id": "reference",
+        "type": "number",
+        "sort": true
+      },
+      {
+        "name": "Currency",
+        "id": "currency",
+        "type": "text",
+        "sort": true
+      },
+      {
+        "name": "Amount",
+        "id": "amount",
+        "type": "number",
+        "sort": true
+      },
+      {
+        "name": "Actions",
+        "id": "actions",
+        "type": "text",
+        "sort": false
+      }
+    ],
+    "search": true,
+    "width": "auto",
+    "autowidth": true,
+    "pagination": {
+      "limit": 7
+    }
+  },
+  "body": {
+    "rows": [
+      [
+        "2021-12-18T20:02:33.898Z",
+        "2021-12-21T20:39:15.553Z",
+        "payment transaction at Lakin",
+        "359520299",
+        "USD",
+        "-59573.48",
+        "1"
+      ],
+      [
+        "2021-08-02T06:10:44.969Z",
+        "2021-09-13T10:56:13.800Z",
+        "deposit transaction at Gaylord",
+        "937371718",
+        "EUR",
+        "12109.42",
+        "2"
+      ],
+      [
+        "2021-08-08T09:56:01.718Z",
+        "2021-12-05T21:54:32.614Z",
+        "invoice transaction at Dickinson",
+        "173155073",
+        "USD",
+        "7914.35",
+        "3"
+      ],
+      [
+        "2021-03-06T20:39:03.608Z",
+        "2022-01-04T01:13:28.483Z",
+        "invoice transaction at Funk,",
+        "029914630",
+        "USD",
+        "29334.99",
+        "4"
+      ],
+      [
+        "2021-06-07T17:52:43.554Z",
+        "2021-06-30T14:28:34.981Z",
+        "withdrawal transaction at Gerlach",
+        "203222410",
+        "USD",
+        "56431.86",
+        "5"
+      ],
+      [
+        "2021-11-16T14:23:28.386Z",
+        "2021-12-27T15:44:28.333Z",
+        "payment transaction at Mosciski",
+        "508855964",
+        "USD",
+        "-15801.37",
+        "6"
+      ],
+      [
+        "2021-05-12T14:09:52.128Z",
+        "2021-10-13T00:25:06.553Z",
+        "invoice transaction at Brekke,",
+        "413040123",
+        "EUR",
+        "4215.15",
+        "7"
+      ],
+      [
+        "2021-08-11T21:18:17.110Z",
+        "2022-01-18T08:03:53.059Z",
+        "payment transaction at McDermott",
+        "518106836",
+        "USD",
+        "17299.74",
+        "8"
+      ],
+      [
+        "2021-07-26T04:25:53.364Z",
+        "2021-09-06T19:30:00.719Z",
+        "withdrawal transaction at Wunsch,",
+        "031451563",
+        "USD",
+        "13644.80",
+        "9"
+      ],
+      [
+        "2021-01-26T15:04:42.693Z",
+        "2021-04-05T21:03:59.863Z",
+        "invoice transaction at Wisoky",
+        "409864591",
+        "EUR",
+        "14964.01",
+        "10"
+      ],
+      [
+        "2021-10-06T03:02:32.906Z",
+        "2021-11-09T16:33:57.597Z",
+        "invoice transaction at O'Reilly,",
+        "688843139",
+        "USD",
+        "-59143.71",
+        "11"
+      ],
+      [
+        "2021-04-09T21:35:12.199Z",
+        "2021-11-28T05:40:34.843Z",
+        "deposit transaction at McCullough,",
+        "836812721",
+        "EUR",
+        "19819.58",
+        "12"
+      ],
+      [
+        "2021-08-10T11:17:20.158Z",
+        "2021-09-18T18:50:33.397Z",
+        "invoice transaction at Windler",
+        "336914543",
+        "USD",
+        "66580.83",
+        "13"
+      ],
+      [
+        "2021-06-05T00:49:32.718Z",
+        "2021-08-28T23:03:29.406Z",
+        "payment transaction at Lakin",
+        "633903765",
+        "USD",
+        "53169.45",
+        "14"
+      ],
+      [
+        "2022-01-16T13:09:03.259Z",
+        "2022-02-06T13:25:51.661Z",
+        "invoice transaction at Hahn",
+        "341700836",
+        "USD",
+        "66341.68",
+        "15"
+      ],
+      [
+        "2021-04-30T08:29:29.273Z",
+        "2021-06-15T05:54:24.457Z",
+        "payment transaction at Toy",
+        "341642017",
+        "EUR",
+        "57356.50",
+        "16"
+      ],
+      [
+        "2022-01-16T14:16:24.038Z",
+        "2022-01-20T20:10:22.598Z",
+        "withdrawal transaction at Predovic",
+        "411147921",
+        "USD",
+        "-13940.96",
+        "17"
+      ],
+      [
+        "2021-07-08T18:06:43.077Z",
+        "2022-01-01T10:16:08.418Z",
+        "deposit transaction at Casper,",
+        "364969777",
+        "USD",
+        "-24446.42",
+        "18"
+      ],
+      [
+        "2021-10-31T01:13:34.642Z",
+        "2021-12-27T22:55:07.586Z",
+        "deposit transaction at Kuhic,",
+        "572730617",
+        "USD",
+        "33632.14",
+        "19"
+      ],
+      [
+        "2021-10-12T07:03:05.805Z",
+        "2022-01-07T10:39:40.004Z",
+        "withdrawal transaction at Wisozk",
+        "682257093",
+        "EUR",
+        "67848.48",
+        "20"
+      ],
+      [
+        "2021-03-02T10:53:58.358Z",
+        "2021-10-08T21:58:59.744Z",
+        "payment transaction at Hudson",
+        "438731255",
+        "USD",
+        "10460.79",
+        "21"
+      ],
+      [
+        "2021-08-09T18:33:24.048Z",
+        "2022-02-14T19:14:45.074Z",
+        "payment transaction at Trantow",
+        "986138326",
+        "EUR",
+        "73398.85",
+        "22"
+      ],
+      [
+        "2021-04-04T06:36:01.228Z",
+        "2022-01-12T02:56:04.981Z",
+        "deposit transaction at Trantow,",
+        "332671602",
+        "EUR",
+        "67422.75",
+        "23"
+      ],
+      [
+        "2021-01-15T17:28:41.862Z",
+        "2021-01-21T09:46:02.614Z",
+        "deposit transaction at Walter",
+        "643230839",
+        "USD",
+        "-68428.32",
+        "24"
+      ],
+      [
+        "2022-02-17T10:59:28.082Z",
+        "2022-02-18T17:44:30.455Z",
+        "withdrawal transaction at Considine,",
+        "459717753",
+        "USD",
+        "30027.55",
+        "25"
+      ],
+      [
+        "2021-02-06T00:55:40.414Z",
+        "2021-04-06T16:51:45.935Z",
+        "deposit transaction at Cruickshank",
+        "472482049",
+        "USD",
+        "51642.38",
+        "26"
+      ],
+      [
+        "2021-05-09T05:06:01.651Z",
+        "2021-08-06T08:42:28.467Z",
+        "deposit transaction at Harber,",
+        "051398347",
+        "USD",
+        "27191.48",
+        "27"
+      ],
+      [
+        "2021-11-04T06:11:18.298Z",
+        "2021-12-01T06:29:02.142Z",
+        "payment transaction at Frami,",
+        "883622757",
+        "EUR",
+        "14097.18",
+        "28"
+      ],
+      [
+        "2021-06-24T04:25:03.568Z",
+        "2021-08-30T15:43:15.829Z",
+        "withdrawal transaction at Haley",
+        "522081138",
+        "USD",
+        "38905.66",
+        "29"
+      ],
+      [
+        "2021-05-27T09:29:11.239Z",
+        "2021-08-21T09:50:30.517Z",
+        "invoice transaction at Becker",
+        "381124281",
+        "USD",
+        "39986.44",
+        "30"
+      ]
+    ]
+  }
+}
