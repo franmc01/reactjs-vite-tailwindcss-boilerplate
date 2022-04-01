@@ -4,15 +4,12 @@ import { EVENT_NINJA } from '../../constants';
 export const ObserverComponent = () => {
 	const [ninjas, setNinjas] = useState<string[]>([]);
 	useEffect(() => {
-		window.addEventListener(EVENT_NINJA, ((
-			event: CustomEvent<{ ninja: string }>
-		) => {
+		const callback = (event: CustomEvent<{ ninja: string }>) => {
 			setNinjas((allNinjas) => allNinjas.concat(event.detail.ninja));
-		}) as EventListener);
+		};
+		window.addEventListener(EVENT_NINJA, callback as EventListener);
 		return () => {
-			window.removeEventListener(EVENT_NINJA, () => {
-				setNinjas([]);
-			});
+			window.removeEventListener(EVENT_NINJA, callback as EventListener);
 		};
 	}, []);
 	return (

@@ -1,44 +1,23 @@
-import { ChangeEvent, useState } from 'react';
 import LiquidParse from '../liquid/LiquidParse';
-import { ObserverComponent } from '../components/custom/ObserverComponent';
-import { PublisherComponent } from '../components/custom/PublisherComponent';
+import LocaleProvider from '../providers/Locale';
 
 const image = LiquidParse.parse('{{vars.tailwind}}');
 const App = () => {
-	const [ninja, setNinja] = useState('');
-	const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-		setNinja(event.target.value);
-	};
 	return (
-		<div className='py-16 px-4 mx-auto max-w-screen-xl sm:py-24 sm:px-6 lg:px-8'>
-			<div className='text-center'>
-				<img
-					src={image}
-					alt='logo-tailwind'
-					className='object-contain mx-auto w-96 h-48'
-				/>
-
-				<h1 className='text-4xl font-semibold tracking-wide text-blue-900 uppercase'>
-					Hello World!
-				</h1>
-
-				<form
-					className='my-5'
-					onSubmit={(ev) => {
-						ev.preventDefault();
-					}}
-				>
-					<input
-						type='text'
-						className='py-2 px-3 mb-3 w-full leading-tight text-gray-700 rounded border focus:outline-none shadow appearance-none'
-						onChange={onChangeInput}
-						placeholder='Enter the name of a famous ninja you know'
+		<LocaleProvider>
+			<section className='py-16 px-4 mx-auto max-w-screen-xl sm:py-24 sm:px-6 lg:px-8'>
+				<div className='text-center'>
+					<h1 className='text-4xl font-semibold tracking-wide text-blue-900 uppercase'>
+						Custom provider
+					</h1>
+					<img
+						src={image}
+						alt='tailwind'
+						className='object-contain mx-auto w-96 h-48'
 					/>
-					<PublisherComponent ninja={ninja} />
-					<ObserverComponent />
-				</form>
-			</div>
-		</div>
+				</div>
+			</section>
+		</LocaleProvider>
 	);
 };
 

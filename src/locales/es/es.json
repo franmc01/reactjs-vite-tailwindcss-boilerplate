@@ -1,0 +1,23 @@
+{
+  "search": {
+    "placeholder": "Escribe un texto para buscar"
+  },
+  "sort": {
+    "sortAsc": "Ordenando ascendente",
+    "sortDesc": "Ordenando descendente"
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "showing": "Mostrando...",
+    "results": "Resultados",
+    "navigate": "Página {page} de {pages}",
+    "page": "Página {page}",
+    "of": "de",
+    "to": "hasta"
+  },
+  "loading": "Cargando...",
+  "noRecordsFound": "No se encontraron resultados",
+  "error": "Un error ha sucedido mientras se consultaban los datos",
+  "noData": "Sin dato"
+}

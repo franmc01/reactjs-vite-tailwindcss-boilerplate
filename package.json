@@ -22,9 +22,11 @@
   "dependencies": {
     "@modyo/sdk": "1.0.6",
     "axios": "0.26.1",
+    "i18next": "21.6.14",
     "liquidjs": "9.36.0",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-i18next": "11.16.2"
   },
   "devDependencies": {
     "@babel/core": "7.17.8",

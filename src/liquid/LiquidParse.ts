@@ -1,12 +1,12 @@
+import * as Liquid from 'liquidjs';
 import { liquidVariables } from './localVariables';
-
 let engine: any;
 
-const Liquid =
-	process.env.NODE_ENV !== 'production' ? require('liquidjs') : null;
-
-if (Liquid) {
-	engine = new Liquid.Liquid({
+const LiquidNs = process.env.NODE_ENV !== 'production' ? Liquid : null;
+// const LiquidNs =
+// 	process.env.NODE_ENV !== 'production' ? require('liquidjs') : null;
+if (LiquidNs) {
+	engine = new LiquidNs.Liquid({
 		strictFilters: true,
 		strictVariables: true,
 	});

@@ -11,9 +11,9 @@ describe('When render <PublisherComponent />', () => {
 	test('should render it self', () => {
 		expect(screen.getByText('Add a ninja!')).toBeInTheDocument();
 	});
-	test('should fire click event by user', () => {
+	test('should fire click event by user', async () => {
 		const spy = vi.spyOn(window, 'dispatchEvent');
-		userEvent.click(screen.getByRole('button'));
+		await userEvent.click(screen.getByRole('button'));
 		expect(spy).toHaveBeenCalled();
 	});
 });
