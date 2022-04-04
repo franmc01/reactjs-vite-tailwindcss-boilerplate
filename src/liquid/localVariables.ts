@@ -4,7 +4,7 @@ export const liquidVariables: {
 } = {
 	site: {
 		name: 'private-oauth2',
-		language: 'en',
+		language: 'es',
 	},
 	vars: {
 		tailwind:
