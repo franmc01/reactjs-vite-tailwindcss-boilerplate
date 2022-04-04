@@ -5,21 +5,22 @@ import LiquidParse from '../liquid/LiquidParse';
 import es from './es/es.json';
 import en from './en/en.json';
 
-const LANG = LiquidParse.parse('{{site.language}}');
+const defaultNS = LiquidParse.parse('{{site.language}}');
+
 const resources = {
-	es,
-	en,
-};
+	en: {
+		en,
+	},
+	es: {
+		es,
+	},
+} as const;
 
 i18n.use(initReactI18next).init({
+	lng: defaultNS,
+	ns: ['es', 'en'],
+	defaultNS,
 	resources,
-	lng: LANG,
-	fallbackLng: 'en',
-	interpolation: {
-		escapeValue: false,
-	},
 });
 
-const i18Instance = i18n;
-
-export default i18Instance;
+export default i18n;
