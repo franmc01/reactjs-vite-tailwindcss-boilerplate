@@ -7,6 +7,12 @@
     "name": "Francisco Marin",
     "url": "https://github.com/francmarin98"
   },
+  "contributors": [
+    {
+      "name": "Jipson Saad",
+      "url": "https://github.com/Exodiel"
+    }
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -15,18 +21,17 @@
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "lint": "eslint src --max-warnings=0",
-    "modyo-push": "modyo-cli push --publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@modyo/sdk": "1.0.6",
+    "@chakra-ui/react": "1.8.7",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@reduxjs/toolkit": "1.8.1",
     "axios": "0.26.1",
-    "gridjs": "5.0.2",
-    "gridjs-react": "5.0.2",
+    "framer-motion": "^6",
     "i18next": "21.6.14",
-    "liquidjs": "9.36.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-i18next": "11.16.2"
@@ -36,7 +41,6 @@
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
-    "@modyo/cli": "3.1.25",
     "@storybook/addon-actions": "6.4.19",
     "@storybook/addon-essentials": "6.4.19",
     "@storybook/addon-interactions": "6.4.19",
@@ -54,7 +58,6 @@
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
     "@vitejs/plugin-react": "1.3.0",
-    "autoprefixer": "10.4.4",
     "babel-jest": "27.5.1",
     "babel-loader": "8.2.4",
     "eslint": "8.12.0",
@@ -64,13 +67,11 @@
     "eslint-plugin-react-hooks": "4.4.0",
     "eslint-plugin-tailwindcss": "3.5.0",
     "jest": "27.5.1",
-    "postcss": "8.4.12",
     "prettier": "2.6.1",
     "storybook-builder-vite": "0.1.22",
     "stylelint": "14.6.1",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard": "25.0.0",
-    "tailwindcss": "3.0.23",
     "typescript": "4.6.3",
     "vite": "2.9.1",
     "vite-tsconfig-paths": "3.4.1",
