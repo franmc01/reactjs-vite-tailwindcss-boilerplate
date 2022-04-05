@@ -20,11 +20,13 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
-    "lint": "eslint src --max-warnings=0",
+    "format": "prettier -uw --ignore-path .prettierignore .",
+    "lint": "eslint src --max-warnings=0 --ignore-path .eslintignore",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@chakra-ui/icons": "1.1.7",
     "@chakra-ui/react": "1.8.7",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
