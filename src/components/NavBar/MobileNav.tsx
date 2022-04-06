@@ -1,79 +1,71 @@
 import {
-	Stack,
+	Grid,
 	Flex,
-	Link,
+	IconButton,
 	Text,
-	Collapse,
-	Icon,
+	FlexProps,
 	useColorModeValue,
-	useDisclosure,
 } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { NAV_ITEMS, NavItem } from './NavItems'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { NAV_ITEMS } from '../../config/NavItems'
+import { NavItem } from './NavItem'
 
-export const MobileNav = () => {
-	return (
-		<Stack
-			bg={useColorModeValue('white', 'gray.800')}
-			p={4}
-			display={{ md: 'none' }}
-		>
-			{NAV_ITEMS.map((navItem) => (
-				<MobileNavItem key={navItem.label} {...navItem} />
-			))}
-		</Stack>
-	)
+interface MobileProps extends FlexProps {
+	onOpen: () => void
+	isOpen: boolean
+	isLargerThan720: boolean
 }
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-	const { isOpen, onToggle } = useDisclosure()
-
+export const MobileNav = ({
+	onOpen,
+	isOpen,
+	isLargerThan720,
+	...rest
+}: MobileProps) => {
 	return (
-		<Stack spacing={4} onClick={children && onToggle}>
+		<Grid
+			templateRows='repeat(1, 1fr)'
+			templateColumns='repeat(2, 1fr)'
+			gap={4}
+			px={{ base: 4, md: 4 }}
+			height='20'
+			bg={useColorModeValue('white', 'gray.900')}
+			borderBottomWidth='1px'
+			borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+		>
 			<Flex
-				py={2}
-				as={Link}
-				href={href ?? '#'}
-				justify={'space-between'}
-				align={'center'}
-				_hover={{
-					textDecoration: 'none',
-				}}
+				alignItems='center'
+				justifyContent={{ base: 'space-between', md: 'flex-start' }}
+				{...rest}
 			>
-				<Text
-					fontWeight={600}
-					color={useColorModeValue('gray.600', 'gray.200')}
-				>
-					{label}
-				</Text>
-				{children && (
-					<Icon
-						as={ChevronDownIcon}
-						transition={'all .25s ease-in-out'}
-						transform={isOpen ? 'rotate(180deg)' : ''}
-						w={6}
-						h={6}
-					/>
-				)}
-			</Flex>
+				<IconButton
+					display={{ base: 'flex', md: 'none' }}
+					onClick={onOpen}
+					variant='outline'
+					aria-label='open menu'
+					icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+				/>
 
-			<Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-				<Stack
-					mt={2}
-					pl={4}
-					borderLeft={1}
-					borderStyle={'solid'}
-					borderColor={useColorModeValue('gray.200', 'gray.700')}
-					align={'start'}
+				<Text
+					display={{ base: 'flex', md: 'block' }}
+					fontSize='2xl'
+					fontFamily='monospace'
+					fontWeight='bold'
 				>
-					{children &&
-						children.map((child) => (
-							<Link key={child.label} py={2} href={child.href}>
-								{child.label}
-							</Link>
-						))}
-				</Stack>
-			</Collapse>
-		</Stack>
+					Logo
+				</Text>
+			</Flex>
+			<Flex
+				alignItems='center'
+				justifyContent={{ base: 'space-between', md: 'flex-end' }}
+				{...rest}
+			>
+				{isLargerThan720 &&
+					NAV_ITEMS.nav.map((item) => (
+						<NavItem key={item.label} isSide={false}>
+							{item.label}
+						</NavItem>
+					))}
+			</Flex>
+		</Grid>
 	)
 }
