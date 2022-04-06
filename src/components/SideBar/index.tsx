@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { ReactText } from 'react'
-import { SIDE_ITEMS } from './SideItems'
+import { NAV_ITEMS } from './SideItems'
 import Config from '../../config'
 
 export default function SidebarWithHeader({
@@ -25,15 +25,11 @@ export default function SidebarWithHeader({
 	children: ReactNode
 }) {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+	const [isLargerThan768] = useMediaQuery('(min-width: 1024px)')
 	const [isLargerThan720] = useMediaQuery('(min-width: 720px)')
 	return (
 		<Box minH='100vh' bg={useColorModeValue('gray.100', 'gray.900')}>
-			<SidebarContent
-				onClose={() => onClose}
-				display={{ base: 'none', md: 'block' }}
-				isSide={true}
-			/>
-			<Drawer
+			{/* <Drawer
 				autoFocus={false}
 				isOpen={isOpen}
 				placement='left'
@@ -45,9 +41,14 @@ export default function SidebarWithHeader({
 				<DrawerContent>
 					<SidebarContent onClose={onClose} isSide={true} />
 				</DrawerContent>
-			</Drawer>
+			</Drawer> */}
 			{/* mobilenav */}
 			<MobileNav onOpen={onOpen} isLargerThan720={isLargerThan720} />
+			<SidebarContent
+				onClose={() => onClose}
+				display={{ base: 'none', md: 'block' }}
+				isSide={true}
+			/>
 			<Box ml={{ base: 0, md: 60 }} p='4'>
 				{children}
 			</Box>
@@ -77,11 +78,11 @@ const SidebarContent = ({ isSide, onClose, ...rest }: SidebarProps) => {
 				</Text>
 				<CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
 			</Flex>
-			{SIDE_ITEMS.map((item) => (
+			{/* {NAV_ITEMS.map((item) => (
 				<NavItem key={item.label} isSide={isSide}>
 					{item.label}
 				</NavItem>
-			))}
+			))} */}
 		</Box>
 	)
 }
@@ -94,13 +95,13 @@ const NavItem = ({ isSide, children, ...rest }: NavItemProps) => {
 	return (
 		<Link
 			href='#'
-			style={{ textDecoration: 'none' }}
+			style={{ textDecoration: 'none', fontWeight: '500', fontSize: '14.1px' }}
 			_focus={{ boxShadow: 'none' }}
 		>
 			<Flex
 				align='center'
-				p='4'
-				mx='4'
+				p='2'
+				mx='2'
 				role='group'
 				cursor='pointer'
 				_hover={{
@@ -124,7 +125,6 @@ interface MobileProps extends FlexProps {
 const MobileNav = ({ onOpen, isLargerThan720, ...rest }: MobileProps) => {
 	return (
 		<Flex
-			ml={{ base: 0, md: 60 }}
 			px={{ base: 4, md: 4 }}
 			height='20'
 			alignItems='center'
@@ -151,7 +151,7 @@ const MobileNav = ({ onOpen, isLargerThan720, ...rest }: MobileProps) => {
 				Logo
 			</Text>
 			{isLargerThan720 &&
-				SIDE_ITEMS.map((item) => (
+				NAV_ITEMS.map((item) => (
 					<NavItem key={item.label} isSide={false}>
 						{item.label}
 					</NavItem>
