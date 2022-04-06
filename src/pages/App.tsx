@@ -1,15 +1,15 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 // import NavBar from '../components/NavBar/index';
-import SimpleSidebar from '../components/SideBar';
+import SimpleSidebar from '../components/SideBar'
 
 const App = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 	return (
 		<>
 			{/* <NavBar /> */}
 			<SimpleSidebar>{t('title')}</SimpleSidebar>
 		</>
-	);
-};
+	)
+}
 
-export default App;
+export default App

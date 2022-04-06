@@ -1,3 +1,49 @@
-{"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\index.tsx": {"path":"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\index.tsx","statementMap":{"0":{"start":{"line":6,"column":0},"end":{"line":11,"column":2}}},"fnMap":{},"branchMap":{},"s":{"0":0},"f":{},"b":{}}
-,"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\pages\\App.tsx": {"path":"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\pages\\App.tsx","statementMap":{"0":{"start":{"line":2,"column":12},"end":{"line":18,"column":1}},"1":{"start":{"line":4,"column":1},"end":{"line":17,"column":3}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":2,"column":12},"end":{"line":2,"column":13}},"loc":{"start":{"line":2,"column":18},"end":{"line":18,"column":1}},"line":2}},"branchMap":{},"s":{"0":1,"1":1},"f":{"0":1},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"09a46ba9030e577620cf1a8111be5fc2f35b0fe1"}
+{
+	"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\index.tsx": {
+		"path": "D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\index.tsx",
+		"statementMap": {
+			"0": {
+				"start": { "line": 6, "column": 0 },
+				"end": { "line": 11, "column": 2 }
+			}
+		},
+		"fnMap": {},
+		"branchMap": {},
+		"s": { "0": 0 },
+		"f": {},
+		"b": {}
+	},
+	"D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\pages\\App.tsx": {
+		"path": "D:\\Dev\\concept-test\\reactjs-vite-tailwindcss-boilerplate\\src\\pages\\App.tsx",
+		"statementMap": {
+			"0": {
+				"start": { "line": 2, "column": 12 },
+				"end": { "line": 18, "column": 1 }
+			},
+			"1": {
+				"start": { "line": 4, "column": 1 },
+				"end": { "line": 17, "column": 3 }
+			}
+		},
+		"fnMap": {
+			"0": {
+				"name": "(anonymous_0)",
+				"decl": {
+					"start": { "line": 2, "column": 12 },
+					"end": { "line": 2, "column": 13 }
+				},
+				"loc": {
+					"start": { "line": 2, "column": 18 },
+					"end": { "line": 18, "column": 1 }
+				},
+				"line": 2
+			}
+		},
+		"branchMap": {},
+		"s": { "0": 1, "1": 1 },
+		"f": { "0": 1 },
+		"b": {},
+		"_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+		"hash": "09a46ba9030e577620cf1a8111be5fc2f35b0fe1"
+	}
 }

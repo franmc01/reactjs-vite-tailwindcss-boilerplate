@@ -6,13 +6,13 @@ import {
 	Image,
 	useColorModeValue,
 	useDisclosure,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { MobileNav } from './MobileNav';
-import { DesktopNav } from './DesktopNav';
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import { MobileNav } from './MobileNav'
+import { DesktopNav } from './DesktopNav'
 
 export default function WithSubnavigation() {
-	const { isOpen, onToggle } = useDisclosure();
+	const { isOpen, onToggle } = useDisclosure()
 
 	return (
 		<Box>
@@ -60,5 +60,5 @@ export default function WithSubnavigation() {
 				<MobileNav />
 			</Collapse>
 		</Box>
-	);
+	)
 }

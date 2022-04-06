@@ -9,12 +9,12 @@ import {
 	Input,
 	Button as ButtonCh,
 	useDisclosure,
-} from '@chakra-ui/react';
-import { useRef, MutableRefObject } from 'react';
+} from '@chakra-ui/react'
+import { useRef, MutableRefObject } from 'react'
 
 const Button = () => {
-	const { isOpen, onOpen, onClose } = useDisclosure();
-	const btnRef = useRef() as MutableRefObject<HTMLButtonElement>;
+	const { isOpen, onOpen, onClose } = useDisclosure()
+	const btnRef = useRef() as MutableRefObject<HTMLButtonElement>
 	return (
 		<>
 			<ButtonCh ref={btnRef} onClick={onOpen}>
@@ -44,7 +44,7 @@ const Button = () => {
 				</DrawerContent>
 			</Drawer>
 		</>
-	);
-};
+	)
+}
 
-export default Button;
+export default Button

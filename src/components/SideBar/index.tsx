@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 import {
 	IconButton,
 	Box,
@@ -13,19 +13,19 @@ import {
 	useColorModeValue,
 	useDisclosure,
 	useMediaQuery,
-} from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import { ReactText } from 'react';
-import { SIDE_ITEMS } from './SideItems';
-import Config from '../../config';
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { ReactText } from 'react'
+import { SIDE_ITEMS } from './SideItems'
+import Config from '../../config'
 
 export default function SidebarWithHeader({
 	children,
 }: {
-	children: ReactNode;
+	children: ReactNode
 }) {
-	const { isOpen, onOpen, onClose } = useDisclosure();
-	const [isLargerThan720] = useMediaQuery('(min-width: 720px)');
+	const { isOpen, onOpen, onClose } = useDisclosure()
+	const [isLargerThan720] = useMediaQuery('(min-width: 720px)')
 	return (
 		<Box minH='100vh' bg={useColorModeValue('gray.100', 'gray.900')}>
 			<SidebarContent
@@ -52,12 +52,12 @@ export default function SidebarWithHeader({
 				{children}
 			</Box>
 		</Box>
-	);
+	)
 }
 
 interface SidebarProps extends BoxProps {
-	onClose: () => void;
-	isSide: boolean;
+	onClose: () => void
+	isSide: boolean
 }
 
 const SidebarContent = ({ isSide, onClose, ...rest }: SidebarProps) => {
@@ -83,12 +83,12 @@ const SidebarContent = ({ isSide, onClose, ...rest }: SidebarProps) => {
 				</NavItem>
 			))}
 		</Box>
-	);
-};
+	)
+}
 
 interface NavItemProps extends FlexProps {
-	children: ReactText;
-	isSide: boolean;
+	children: ReactText
+	isSide: boolean
 }
 const NavItem = ({ isSide, children, ...rest }: NavItemProps) => {
 	return (
@@ -114,12 +114,12 @@ const NavItem = ({ isSide, children, ...rest }: NavItemProps) => {
 				{children}
 			</Flex>
 		</Link>
-	);
-};
+	)
+}
 
 interface MobileProps extends FlexProps {
-	onOpen: () => void;
-	isLargerThan720: boolean;
+	onOpen: () => void
+	isLargerThan720: boolean
 }
 const MobileNav = ({ onOpen, isLargerThan720, ...rest }: MobileProps) => {
 	return (
@@ -157,5 +157,5 @@ const MobileNav = ({ onOpen, isLargerThan720, ...rest }: MobileProps) => {
 					</NavItem>
 				))}
 		</Flex>
-	);
-};
+	)
+}

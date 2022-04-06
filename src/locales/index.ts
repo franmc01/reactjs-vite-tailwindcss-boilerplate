@@ -1,10 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-import es from './es/es.json';
-import en from './en/en.json';
+import es from './es/es.json'
+import en from './en/en.json'
 
-const defaultNS = 'es';
+const defaultNS = 'es'
 
 const resources = {
 	en: {
@@ -13,13 +13,13 @@ const resources = {
 	es: {
 		es,
 	},
-} as const;
+} as const
 
 i18n.use(initReactI18next).init({
 	lng: defaultNS,
 	ns: ['es', 'en'],
 	defaultNS,
 	resources,
-});
+})
 
-export default i18n;
+export default i18n

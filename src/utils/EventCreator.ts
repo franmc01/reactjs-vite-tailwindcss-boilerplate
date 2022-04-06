@@ -1,19 +1,19 @@
 export class EventCreator<T> {
-	private eventName: string;
-	private data = {};
+	private eventName: string
+	private data = {}
 	constructor(eventName: string) {
-		this.eventName = eventName;
+		this.eventName = eventName
 	}
 
 	addData(detail: T) {
 		this.data = {
 			detail,
-		};
-		return this;
+		}
+		return this
 	}
 
 	dispatchEvent() {
-		const event = new CustomEvent<{ detail: T }>(this.eventName, this.data);
-		window.dispatchEvent(event);
+		const event = new CustomEvent<{ detail: T }>(this.eventName, this.data)
+		window.dispatchEvent(event)
 	}
 }

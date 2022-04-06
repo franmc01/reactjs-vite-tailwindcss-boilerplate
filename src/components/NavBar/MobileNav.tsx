@@ -7,9 +7,9 @@ import {
 	Icon,
 	useColorModeValue,
 	useDisclosure,
-} from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { NAV_ITEMS, NavItem } from './NavItems';
+} from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { NAV_ITEMS, NavItem } from './NavItems'
 
 export const MobileNav = () => {
 	return (
@@ -22,11 +22,11 @@ export const MobileNav = () => {
 				<MobileNavItem key={navItem.label} {...navItem} />
 			))}
 		</Stack>
-	);
-};
+	)
+}
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
-	const { isOpen, onToggle } = useDisclosure();
+	const { isOpen, onToggle } = useDisclosure()
 
 	return (
 		<Stack spacing={4} onClick={children && onToggle}>
@@ -75,5 +75,5 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 				</Stack>
 			</Collapse>
 		</Stack>
-	);
-};
+	)
+}

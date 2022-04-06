@@ -1,22 +1,22 @@
 module.exports = {
-	'stories': [
+	stories: [
 		'../design/**/*.stories.mdx',
-		'../design/**/*.stories.@(js|jsx|ts|tsx)'
+		'../design/**/*.stories.@(js|jsx|ts|tsx)',
 	],
-	'addons': [
+	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		'@storybook/addon-interactions'
+		'@storybook/addon-interactions',
 	],
-	'framework': '@storybook/react',
+	framework: '@storybook/react',
 	core: {
-		builder: 'storybook-builder-vite'
+		builder: 'storybook-builder-vite',
 	},
 	async viteFinal(config) {
 		return {
 			...config,
 			esbuild: {
-				...config.esbuild
+				...config.esbuild,
 			},
 			rollupOptions: {
 				...config.rollupOptions,
@@ -26,10 +26,10 @@ module.exports = {
 					// Global vars to use in UMD build for externalized deps
 					globals: {
 						react: 'React',
-						'react-dom': 'ReactDOM'
-					}
-				}
-			}
-		};
-	}
-};
+						'react-dom': 'ReactDOM',
+					},
+				},
+			},
+		}
+	},
+}

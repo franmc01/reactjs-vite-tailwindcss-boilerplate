@@ -1,8 +1,8 @@
 export interface SideItem {
-	label: string;
-	subLabel?: string;
-	children?: Array<SideItem>;
-	href?: string;
+	label: string
+	subLabel?: string
+	children?: Array<SideItem>
+	href?: string
 }
 
 export const SIDE_ITEMS: Array<SideItem> = [
@@ -38,10 +38,10 @@ export const SIDE_ITEMS: Array<SideItem> = [
 		label: 'Salida',
 		href: '#',
 	},
-];
+]
 
 export const SIDE_PAGE_ITEMS: Array<SideItem> = [
 	{
 		label: '',
 	},
-];
+]
